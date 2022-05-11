@@ -10,4 +10,15 @@ public class Dollar {
     public Dollar times(int i) {
         return new Dollar(this.amount * i);
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Dollar){
+            Dollar targetDollar = (Dollar) obj;
+            if(targetDollar.amount == this.amount){
+                return true;
+            }
+        }
+        return false;
+    }
 }
