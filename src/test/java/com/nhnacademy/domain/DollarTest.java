@@ -17,4 +17,17 @@ class DollarTest {
         product = five.times(3);
         assertThat(15).isEqualTo(product);
     }
+
+    @DisplayName("동등성")
+    @Test
+    void testEquality1() {
+        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
+    }
+
+    @DisplayName("동등성")
+    @Test
+    void testEquality2() {
+        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
+        assertThat(new Dollar(6).equals(new Dollar(5))).isFalse();
+    }
 }

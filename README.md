@@ -14,9 +14,15 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * [ ] amount를 private으로 만들기
 * [X] Dollar 부작용?
 * [ ] Money 반올림?
+* [X] equals()
+* [ ] hashcode()
+* [ ] Equal null
+* [ ] Equal Object
 
 ## REVIEW
 * chapter1. 다중통화를 지원하는 Money 객체
   * 진짜 작은 부분부터 테스트를 한다는 점이 신기하고 적응이 안됐다.
 * chapter2. 타락한 객체
   * 컴파일 에러를 해결하기 위해 `return null;` 을 한다던지, 빠른 성공을 위해 바로 성공하는 값을 `return` 한다는 점이 아직은 크게 와닿지 않지만 빠르게 적응해야겠다.
+* chapter3. 모두를 위한 평등
+  * 삼각 측량이라는 방법에 빗대어 두 가지 테스트 케이스를 통과하도록 하여 코드의 신뢰도를 높히는 방법을 배웠다. 안정성이 높아진다는 측면에서 마음이 편해졌다.
