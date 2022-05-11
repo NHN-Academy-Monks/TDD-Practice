@@ -1,7 +1,7 @@
 package com.nhnacademy.dollar;
 
 public class Dollar {
-    public long amount;
+    private long amount;
 
     public Dollar(long amount) {
         this.amount = amount;
