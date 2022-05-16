@@ -2,16 +2,17 @@ package com.nhnacademy.dollar;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.nhnacademy.franc.Franc;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class DollarTest {
     @Test
-    @DisplayName("달러 곱하기")
+    @DisplayName("프랑 곱하기")
     void testMultiplication() {
-        Dollar five = new Dollar(5);
-        assertThat(five.times(2)).isEqualTo(new Dollar(10));
-        assertThat(five.times(3)).isEqualTo(new Dollar(15));
+        Franc five = new Franc(5);
+        assertThat(five.times(2)).isEqualTo(new Franc(10));
+        assertThat(five.times(3)).isEqualTo(new Franc(15));
     }
 
     @Test

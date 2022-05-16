@@ -15,9 +15,7 @@ public class Dollar {
     public boolean equals(Object obj){
         if(obj instanceof Dollar){
             Dollar targetDollar = (Dollar) obj;
-            if(targetDollar.amount == this.amount){
-                return true;
-            }
+            return targetDollar.amount == this.amount;
         }
         return false;
     }
