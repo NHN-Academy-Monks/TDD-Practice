@@ -20,8 +20,10 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * [ ] Equal Object
 * [X] 5CHF X 2 = 10CHF
 * [ ] Dollar/Franc 중복
-* [ ] 공용 equals
+* [X] 공용 equals
 * [ ] 공용 times
+* [X] Franc과 Dollar 비교하기
+* [ ] 통화?
 
 ## REVIEW
 * chapter1. 다중통화를 지원하는 Money 객체
@@ -45,3 +47,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * chapter6. 돌아온 '모두를 위한 평등'
   * `공용 equals`
   * 중복을 지우는 과정을 통해 테스트의 중요성을 알게 되었다. 테스트 코드를 계속 실행하며 중복을 제거하니 안심하고 제거할 수 있었다.
+* chapter7. 사과와 오렌지
+  * `Franc과 Dollar 비교하기`
+  * 오버 엔지니어링 하지 않음에 대해 학습했다.
+  * equals의 확장 또한 올바른 테스트 위에서 하다보니 안전하게 코드의 기능을 확장할 수 있었다.
