@@ -16,9 +16,11 @@ public class DollarTest {
     }
 
     @Test
-    @DisplayName("달러의 동치성(동일성)")
+    @DisplayName("Money 동치성(동등성)")
     void testEquality() {
         assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
         assertThat(new Dollar(5).equals(new Dollar(6))).isFalse();
+        assertThat(new Franc(5).equals(new Franc(5))).isTrue();
+        assertThat(new Franc(5).equals(new Franc(6))).isFalse();
     }
 }

@@ -1,22 +1,13 @@
 package com.nhnacademy.franc;
 
-public class Franc {
-    private long amount;
+import com.nhnacademy.money.Money;
 
+public class Franc extends Money {
     public Franc(long amount) {
         this.amount = amount;
     }
 
     public Franc times(int i){
         return new Franc(this.amount * i);
-    }
-
-    @Override
-    public boolean equals(Object obj){
-        if(obj instanceof Franc){
-            Franc target = (Franc) obj;
-            return target.amount == this.amount;
-        }
-        return false;
     }
 }
