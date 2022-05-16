@@ -18,6 +18,10 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * [ ] hashcode()
 * [ ] Equal null
 * [ ] Equal Object
+* [X] 5CHF X 2 = 10CHF
+* [ ] Dollar/Franc 중복
+* [ ] 공용 equals
+* [ ] 공용 times
 
 ## REVIEW
 * chapter1. 다중통화를 지원하는 Money 객체
@@ -27,7 +31,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
   * `Dollar 부작용?`
   * 컴파일 에러를 해결하기 위해 `return null;` 을 한다던지, 빠른 성공을 위해 바로 성공하는 값을 `return` 한다는 점이 아직은 크게 와닿지 않지만 빠르게 적응해야겠다.
 * chapter3. 모두를 위한 평등
-  * `equals()
+  * `equals()`
   * 삼각 측량이라는 방법에 빗대어 두 가지 테스트 케이스를 통과하도록 하여 코드의 신뢰도를 높히는 방법을 배웠다. 안정성이 높아진다는 측면에서 마음이 편해졌다.
 * chapter4. 프라이버시
   * `amount를 private으로 만들기`
@@ -35,3 +39,5 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
   * private은 인스턴스가 아닌 클래스 레벨에서 적용됨. `dollar.amount == this.amount`가 가능한 이유
   * 테스트도 리팩터링을 한다.
   * 테스트를 진행하면서 다른 테스트가 망가지지 않도록 잘 관리한다.
+* chapter5. 솔직히 말하자면
+  * 과거에 했던 중복된 내용을 가지고 테스트를 새로 진행하면서 (테스트 작성 - 컴파일 되게하기 - 실패하는지 확인 - 실행하게 만듦 - 중복제거)라는 순서를 다시 한 번 상기시킬 수 있었다.
