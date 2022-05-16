@@ -1,8 +1,6 @@
 package com.nhnacademy.domain;
 
-public class Dollar {
-
-    int amount;
+public class Dollar extends Money {
 
     public Dollar(int amount) {
         this.amount = amount;
@@ -10,11 +8,5 @@ public class Dollar {
 
     public Dollar times(int multiplier) {
         return new Dollar(this.amount * multiplier);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        Dollar dollar = (Dollar) o;
-        return dollar.amount == amount;
     }
 }
