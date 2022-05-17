@@ -35,7 +35,7 @@ class DollarTest {
     @DisplayName("private 만들기")
     void testMultiplication_private() {
         Dollar five = new Dollar(5);
-        Dollar product = five.times(2);
+        Money product = five.times(2);
         assertThat(new Dollar(10)).isEqualTo(product);
 
         product = five.times(3);
@@ -45,24 +45,24 @@ class DollarTest {
     @Test
     @DisplayName("테스트 코드 리팩토링")
     void testMultiplication_refactor() {
-        Dollar five = new Dollar(5);
-        assertThat(new Dollar(10)).isEqualTo(five.times(2));
-        assertThat(new Dollar(15)).isEqualTo(five.times(3));
+        Money five = Money.dollar(5);
+        assertThat(Money.dollar(10)).isEqualTo(five.times(2));
+        assertThat(Money.dollar(15)).isEqualTo(five.times(3));
     }
 
     @Test
     public void tesFrancMultiplication() {
-        Franc five = new Franc(5);
-        assertThat(new Franc(10)).isEqualTo(five.times(2));
+        Franc five = Money.franc(5);
+        assertThat(Money.franc(10)).isEqualTo(five.times(2));
     }
 
     @Test
     @DisplayName("동등성2")
     void testEquality() {
-        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
-        assertThat(new Dollar(5).equals(new Dollar(6))).isFalse();
-        assertThat(new Franc(5).equals(new Franc(5))).isTrue();
-        assertThat(new Franc(5).equals(new Franc(6))).isFalse();
-        assertThat(new Dollar(5).equals(new Franc(5))).isFalse();
+        assertThat(Money.dollar(5).equals(Money.dollar(5))).isTrue();
+        assertThat(Money.dollar(5).equals(Money.dollar(6))).isFalse();
+        assertThat(new Franc(5).equals(Money.franc(5))).isTrue();
+        assertThat(new Franc(5).equals(Money.franc(6))).isFalse();
+        assertThat(Money.dollar(5).equals(Money.franc(5))).isFalse();
     }
 }

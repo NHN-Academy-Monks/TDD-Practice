@@ -19,7 +19,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * [ ] Equal null
 * [ ] Equal Object
 * [X] 5CHF X 2 = 10CHF
-* [ ] Dollar/Franc 중복
+* [X] Dollar/Franc 중복
 * [X] 공용 equals
 * [ ] 공용 times
 * [X] Franc과 Dollar 비교하기
@@ -52,3 +52,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
   * 오버 엔지니어링 하지 않음에 대해 학습했다.
     > 더 많은 동기가 있기 전에는 더 많은 설계를 도입하지 않기로 했다.
   * equals의 확장 또한 올바른 테스트 위에서 하다보니 안전하게 코드의 기능을 확장할 수 있었다.
+* chapter8. 객체 만들기
+  * `Dollar/Franc 중복`
+  * 팩토리 메서드에 대해 알게 되었다.
+  * 팩토리 메서드를 통해 하위 클래스 존재 여부를 모르게 했을 때의 장점이 아직 이해되지 않는다.
