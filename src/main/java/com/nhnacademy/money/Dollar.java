@@ -1,6 +1,4 @@
-package com.nhnacademy.money.dollar;
-
-import com.nhnacademy.money.Money;
+package com.nhnacademy.money;
 
 public class Dollar extends Money {
     public Dollar(long amount) {

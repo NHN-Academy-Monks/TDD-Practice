@@ -2,9 +2,8 @@ package com.nhnacademy.dollar;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.nhnacademy.money.franc.Franc;
+import com.nhnacademy.money.Franc;
 import com.nhnacademy.money.Money;
-import com.nhnacademy.money.dollar.Dollar;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

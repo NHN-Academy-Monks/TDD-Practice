@@ -1,8 +1,5 @@
 package com.nhnacademy.money;
 
-import com.nhnacademy.money.dollar.Dollar;
-import com.nhnacademy.money.franc.Franc;
-
 public abstract class Money {
     protected long amount;
 
