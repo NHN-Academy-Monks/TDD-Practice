@@ -1,4 +1,4 @@
-package com.nhnacademy.franc;
+package com.nhnacademy.money.franc;
 
 import com.nhnacademy.money.Money;
 
