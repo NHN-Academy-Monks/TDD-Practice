@@ -20,10 +20,12 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 8. [ ] Equal null
 9. [ ] Equal object
 10. [X] ~~5CHF * 2 = 10CHF~~
-11. [ ] ***Dollar/Franc 중복***
+11. [X] Dollar/Franc 중복
 12. [X] ~~공용 Equals~~
 13. [ ] 공용 times
-14. [X] ~~Franc과 Dollar 비교하기~~
+14. [X] ~~통화?~~
+15. [X] ~~Franc과 Dollar 비교하기~~
+16. testFranceMultiplication 제거
 
 ## 후기
 ### 1~2장 켄트 백은 테스트의 초록색 막대를 보기위해 둘 중 하나의 방법을 선택하여 사용한다.
@@ -56,3 +58,8 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 ### 8~10장
 1. times를 부모 클래스에게 선언하여 중복을 점진적으로 제거하였다.
 2. 부모 클레스에게 자식들의 생성을 맡겼다. (팩토리 메서드를 이용)
+3. 통화 적용 후 times에있는 생성자를 제거하고 Money의 팩토리 메서드를 이용했다.
+4. Franc에 적용했던 것을 한번에 Dollar에 적용하였다.
+5. Money와 France의 amount, currency를 부모측에 생성자로 맡겼다.
+6. 테스트는 점진적으로 진행해야함을 다시한번 느끼고, 구현에 서두르지 말자.
+
