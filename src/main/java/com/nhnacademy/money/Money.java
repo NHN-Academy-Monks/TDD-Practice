@@ -1,6 +1,6 @@
 package com.nhnacademy.money;
 
-public abstract class Money {
+public class Money {
     protected long amount;
     protected String currency;
 
@@ -22,12 +22,21 @@ public abstract class Money {
         Money money = (Money) obj;
 
         return money.amount == this.amount
-            && getClass().equals(money.getClass());
+            && currency.equals(money.currency);
     }
 
-    public abstract Money times(int multiplier);
+    public Money times(int multiplier){
+        return new Money(amount * multiplier, currency);
+    }
 
     public String currency() {
         return this.currency;
     };
+    @Override
+    public String toString() {
+        return "Money{" +
+            "amount=" + amount +
+            ", currency='" + currency + '\'' +
+            '}';
+    }
 }

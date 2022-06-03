@@ -22,7 +22,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 10. [X] ~~5CHF * 2 = 10CHF~~
 11. [X] Dollar/Franc 중복
 12. [X] ~~공용 Equals~~
-13. [ ] 공용 times
+13. [X] 공용 times
 14. [X] ~~통화?~~
 15. [X] ~~Franc과 Dollar 비교하기~~
 16. testFranceMultiplication 제거
@@ -62,4 +62,5 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 4. Franc에 적용했던 것을 한번에 Dollar에 적용하였다.
 5. Money와 France의 amount, currency를 부모측에 생성자로 맡겼다.
 6. 테스트는 점진적으로 진행해야함을 다시한번 느끼고, 구현에 서두르지 말자.
-
+7. times를 일치 시키기위해서 다시 기존 자식 생성자를 사용하였다.
+8. toString()과 같은 메서드는 부수효과가 적으므로 테스트를 하지않았다.
