@@ -65,4 +65,11 @@ class DollarTest {
         assertThat(new Franc(5).equals(Money.franc(6))).isFalse();
         assertThat(Money.dollar(5).equals(Money.franc(5))).isFalse();
     }
+
+    @Test
+    @DisplayName("통화 표현")
+    void testCurrency() {
+        assertThat("USD").isEqualTo( Money.dollar(1).currency());
+        assertThat("CHF").isEqualTo( Money.franc(1).currency());
+    }
 }
