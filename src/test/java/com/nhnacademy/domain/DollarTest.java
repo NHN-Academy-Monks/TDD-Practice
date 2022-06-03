@@ -21,25 +21,25 @@ class DollarTest {
     @DisplayName("동등성")
     @Test
     void testEquality1() {
-        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
+        assertThat(new Dollar(5, "USD").equals(new Dollar(5, "USD"))).isTrue();
     }
 
     @DisplayName("동등성")
     @Test
     void testEquality2() {
-        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
-        assertThat(new Dollar(6).equals(new Dollar(5))).isFalse();
+        assertThat(new Dollar(5, "USD").equals(new Dollar(5, "USD"))).isTrue();
+        assertThat(new Dollar(6, "USD").equals(new Dollar(5, "USD"))).isFalse();
     }
 
     @Test
     @DisplayName("private 만들기")
     void testMultiplication_private() {
-        Dollar five = new Dollar(5);
+        Dollar five = new Dollar(5, "USD");
         Money product = five.times(2);
-        assertThat(new Dollar(10)).isEqualTo(product);
+        assertThat(new Dollar(10, "USD")).isEqualTo(product);
 
         product = five.times(3);
-        assertThat(new Dollar(15)).isEqualTo(product);
+        assertThat(new Dollar(15, "USD")).isEqualTo(product);
     }
 
     @Test
@@ -61,8 +61,8 @@ class DollarTest {
     void testEquality() {
         assertThat(Money.dollar(5).equals(Money.dollar(5))).isTrue();
         assertThat(Money.dollar(5).equals(Money.dollar(6))).isFalse();
-        assertThat(new Franc(5).equals(Money.franc(5))).isTrue();
-        assertThat(new Franc(5).equals(Money.franc(6))).isFalse();
+        assertThat(new Franc(5, "CHF").equals(Money.franc(5))).isTrue();
+        assertThat(new Franc(5, "CHF").equals(Money.franc(6))).isFalse();
         assertThat(Money.dollar(5).equals(Money.franc(5))).isFalse();
     }
 
@@ -71,5 +71,10 @@ class DollarTest {
     void testCurrency() {
         assertThat("USD").isEqualTo( Money.dollar(1).currency());
         assertThat("CHF").isEqualTo( Money.franc(1).currency());
+    }
+
+    @Test
+    void testDifferentClassEquality() {
+        assertThat(new Money(10, "CHF")).isEqualTo(new Franc(10, "CHF"));
     }
 }

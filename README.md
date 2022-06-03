@@ -21,7 +21,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * [X] 5CHF X 2 = 10CHF
 * [X] Dollar/Franc 중복
 * [X] 공용 equals
-* [ ] 공용 times
+* [X] 공용 times
 * [X] Franc과 Dollar 비교하기
 * [ ] 통화?
 
@@ -59,3 +59,6 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 * chapter9. 우리가 사는 시간
   * `Dollar/Franc 중복`
   * TDD를 진행하면서 자잘한 리팩토링을 함께 하는 것이 아직은 어렵다.
+* chapter10. 흥미로운 시간
+  * `공용 times`
+  * 작은 변화를 위해 코드를 바로 고치지 않고 테스트가 통과되는 상황으로 되돌려 새로운 테스트를 통해 리팩토링 해야한다는 것을 배웠다.
