@@ -1,24 +1,23 @@
 package com.nhnacademy.domain;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Objects;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class DollarTest {
 
     @DisplayName("달러 객체 연산 후 값이 바뀌는 문제 해결")
-//    @Test
+    // @Test
     void testMultiplication() {
-//        Dollar five = new Dollar(5);
-//        Dollar product = five.times(2);
-//        assertThat(10).isEqualTo(product);
-//
-//        product = five.times(3);
-//        assertThat(15).isEqualTo(product);
+        // Dollar five = new Dollar(5);
+        // Dollar product = five.times(2);
+        // assertThat(10).isEqualTo(product);
+        //
+        // product = five.times(3);
+        // assertThat(15).isEqualTo(product);
     }
 
     @DisplayName("동등성")
@@ -76,13 +75,23 @@ class DollarTest {
     @Test
     @DisplayName("통화 표현")
     void testCurrency() {
-        assertThat("USD").isEqualTo( Money.dollar(1).currency());
-        assertThat("CHF").isEqualTo( Money.franc(1).currency());
+        assertThat("USD").isEqualTo(Money.dollar(1).currency());
+        assertThat("CHF").isEqualTo(Money.franc(1).currency());
     }
 
     // @Test
     // void testDifferentClassEquality() {
     //     assertThat(new Money(10, "CHF")).isEqualTo(new Franc(10, "CHF"));
     // }
+
+    @DisplayName("드디어, 더하기")
+    @Test
+    void testSimpleAddition() {
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(five);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(10), reduced);
+    }
 
 }
