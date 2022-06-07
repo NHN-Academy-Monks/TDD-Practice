@@ -10,22 +10,23 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 
 ## TODO LIST
 
-1. [ ] $5 + 10CHF = $10
-2. [X] ~~$5 * 2 = $10~~
-3. [X] ~~amount를 private로 만들기.~~
-4. [X] ~~Dollar 부작용?~~
-5. [ ] Money 반올림.
-6. [X] ~~equals()~~
-7. [ ] hashCode()
-8. [ ] Equal null
-9. [ ] Equal object
-10. [X] ~~5CHF * 2 = 10CHF~~
-11. [X] ~~Dollar/Franc 중복~~
-12. [X] ~~공용 Equals~~
-13. [X] 공용 times
-14. [X] ~~통화?~~
-15. [X] ~~Franc과 Dollar 비교하기~~
-16. testFranceMultiplication 제거
+1. [ ] $5 + 10CHF = $10 (환율이 2:1일 경우)
+2. [ ] ***$5 + $5 = $10***
+3. [X] ~~$5 * 2 = $10~~
+4. [X] ~~amount를 private로 만들기.~~
+5. [X] ~~Dollar 부작용?~~
+6. [ ] Money 반올림.
+7. [X] ~~equals()~~
+8. [ ] hashCode()
+9. [ ] Equal null
+10. [ ] Equal object
+11. [X] ~~5CHF * 2 = 10CHF~~
+12. [X] ~~Dollar/Franc 중복~~
+13. [X] ~~공용 Equals~~
+14. [X] 공용 times
+15. [X] ~~통화?~~
+16. [X] ~~Franc과 Dollar 비교하기~~
+17. testFranceMultiplication 제거
 
 ## 후기
 ### 1~2장 켄트 백은 테스트의 초록색 막대를 보기위해 둘 중 하나의 방법을 선택하여 사용한다.
@@ -68,4 +69,7 @@ TDD 수련을 위한 NHN Academy 학생들의 저장소
 ### 11장 ~ 13장
 1. 하위 클래스들의 중복을 드러내고 삭제함. 
 2. 이에 따라서 테스트 또한 하위 클래스를 삭제시 테스트 갱신, 중복 체크가 필요함을 느꼈다.
-3. 
+3. 새로운 테스트의 분위기 전환시 기존 테스트에서 좀 더 세분화가 가능하다.
+4. 테스트를 진행하면서 금액의 연산을 행하는 책임, 환전을하는 책임을 다른 객체에게 각각 분배하였다.
+5. 테스트를 하면서 떠오르는 메타포를 일단은 적용하라. (다만 그 이유가 합당하여야한다.)
+6. 

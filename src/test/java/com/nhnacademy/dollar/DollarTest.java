@@ -2,6 +2,8 @@ package com.nhnacademy.dollar;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.nhnacademy.bank.Bank;
+import com.nhnacademy.expression.Expression;
 import com.nhnacademy.money.Money;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -27,5 +29,17 @@ public class DollarTest {
     void testCurrency() {
         assertThat(Money.dollar(1).currency()).isEqualTo("USD");
         assertThat(Money.franc(1).currency()).isEqualTo("CHF");
+    }
+
+    @Test
+    void testSimpleAddition() {
+//        Money sum = Money.dollar(5).plus(Money.dollar(5));
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(five);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+
+        assertThat(reduced).isEqualTo(Money.dollar(10));
+
     }
 }

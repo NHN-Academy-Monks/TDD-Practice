@@ -1,6 +1,8 @@
 package com.nhnacademy.money;
 
-public class Money {
+import com.nhnacademy.expression.Expression;
+
+public class Money implements Expression {
     protected long amount;
     protected String currency;
 
@@ -38,5 +40,9 @@ public class Money {
             "amount=" + amount +
             ", currency='" + currency + '\'' +
             '}';
+    }
+
+    public Expression plus(Money dollar) {
+        return new Money(amount + dollar.amount, currency);
     }
 }
