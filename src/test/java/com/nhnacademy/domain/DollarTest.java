@@ -1,9 +1,12 @@
 package com.nhnacademy.domain;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Objects;
 
 class DollarTest {
 
@@ -50,11 +53,11 @@ class DollarTest {
         assertThat(Money.dollar(15)).isEqualTo(five.times(3));
     }
 
-    @Test
-    public void tesFrancMultiplication() {
-        Franc five = Money.franc(5);
-        assertThat(Money.franc(10)).isEqualTo(five.times(2));
-    }
+    // @Test
+    // public void tesFrancMultiplication() {
+    //     Money five = Money.franc(5);
+    //     assertThat(Money.franc(10)).isEqualTo(five.times(2));
+    // }
 
     @Test
     @DisplayName("동등성2")
@@ -64,6 +67,10 @@ class DollarTest {
         assertThat(new Franc(5, "CHF").equals(Money.franc(5))).isTrue();
         assertThat(new Franc(5, "CHF").equals(Money.franc(6))).isFalse();
         assertThat(Money.dollar(5).equals(Money.franc(5))).isFalse();
+
+        assertEquals(Money.dollar(5), Money.dollar(5));
+        assertNotEquals(Money.dollar(5), Money.dollar(6));
+        assertNotEquals(Money.franc(5), Money.dollar(5));
     }
 
     @Test
@@ -73,8 +80,9 @@ class DollarTest {
         assertThat("CHF").isEqualTo( Money.franc(1).currency());
     }
 
-    @Test
-    void testDifferentClassEquality() {
-        assertThat(new Money(10, "CHF")).isEqualTo(new Franc(10, "CHF"));
-    }
+    // @Test
+    // void testDifferentClassEquality() {
+    //     assertThat(new Money(10, "CHF")).isEqualTo(new Franc(10, "CHF"));
+    // }
+
 }
